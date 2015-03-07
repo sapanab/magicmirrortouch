@@ -1,0 +1,39 @@
+<ion-view title="{{item.product.name}}">
+    <ion-nav-buttons side="right" >
+        <span ng-show="showbutton == 'tab.product'">
+            
+            <button class="button button-icon ion-ios7-arrow-back" ng-click="previous(item.product.id);"></button>
+            <button class="button button-icon icon ion-ios7-arrow-forward" ng-click="next(item.product.id);"></button>
+        </span>
+        
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+            <ion-slide-box show-pager="true" auto-play="true" pager-click="true">
+                <ion-slide ng-repeat="itemimg in item.productimage">
+                    <div class="box">
+                        <ion-scroll zooming="true" direction="x" min-zoom="1" max-zoom="2" style="width:80%;display:block;margin:0 auto;">
+                            <img ng-src="{{itemimg.image|imagepathbig}}" class="full-image">
+                        </ion-scroll>
+                    </div>
+                </ion-slide>
+            </ion-slide-box>
+            <div class="row">
+                <div class="col">
+                    <h3 class="text-center"><span class="royal">{{item.product.price|convertprice}}</span></h3>
+                    <p><strong>Description:</strong> {{item.product.description}}</p>
+
+                    <p><strong style="float:left;">Quantity:</strong> <input type="number" ng-model="item.product.quantity2" class="numeric"> pcs</p>
+
+                   
+                   
+                    <button class="button button-royal button-bold button-block icon-left ion-ios7-cart" ng-click="addtocart(item.product.id,item.product.name,item.product.price,item.product.quantity2)">Add to cart</button>
+                    <center><p>- or -</p></center>
+                    <button class="button button-royal2 button-bold button-block icon-left ion-ios7-heart" ng-click="addtowishlist()">Add to wishlist</button>
+                     <center><p>- or -</p></center>
+                    <button class="button button-royal3 button-bold button-block icon-left ion-android-share" ng-click="sharePopup()">Share</button>
+                    
+
+                </div>
+            </div>
+    </ion-content>
+</ion-view>

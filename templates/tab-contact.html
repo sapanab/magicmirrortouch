@@ -1,0 +1,35 @@
+<ion-view title="Contact">
+    <ion-content class="has-header">
+
+        <div class="list">
+            <a class="item item-icon-left" href="mailto:lyla@lylaloves.co.uk">
+                <i class="icon ion-ios7-email"></i>
+                Send Us An Email
+            </a>
+
+            <a class="item item-icon-left" href="tel:02071836335">
+                <i class="icon ion-ios7-telephone"></i>
+                Call Us
+                <span class="item-note" style="font-size: 12px;">
+                    Mon - Fri 8:00am - 5:00pm 
+                </span>
+            </a>
+            <div class="item item-divider">
+                Send Us A Query
+            </div>
+            <label class="item item-input">
+                <input type="text" placeholder="Name" ng-model="contact.name">
+            </label>
+            <label class="item item-input">
+                <input type="email" placeholder="Email" ng-model="contact.email">
+            </label>
+            <label class="item item-input">
+                <input type="tel" placeholder="Phone" ng-model="contact.phone">
+            </label>
+            <label class="item item-input">
+                <textarea placeholder="Comments" ng-model="contact.comment"></textarea>
+            </label>
+            <div class="padding"><button class="button button-block button-positive" ng-click="usercontact(contact)">Submit</button></div>
+        </div>
+    </ion-content>
+</ion-view>

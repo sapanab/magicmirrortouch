@@ -1,0 +1,51 @@
+<ion-view title="My Cart">
+    <ion-content class="has-header">
+
+        <div class="list">
+            <a class="item item-thumbnail-left" ng-repeat="product in products">
+                <img ng-src="{{product.image|imagepath}}">
+                <h2>{{product.name}}</h2>
+                <h3 class="royal">{{product.price|convertprice}}</h3>
+                <p><strong>Quantity:</strong> {{product.qty}}</p>
+                <button class="button button-clear button-assertive button-small" ng-click="deletecart(product.id)">REMOVE</button>
+            </a>
+            <div class="item item-divider">Discount</div>
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper royal">
+                    <input type="text" placeholder="Enter your coupon code" ng-model="couponcode" class="discountcoupon form-control newsletteremail " style="margin-right:5px;">
+                </label>
+                <button class="button button-royal button-small" ng-click="checkcoupon(couponcode)">
+                    Submit
+                </button>
+            </div>
+            <a class="item item-icon-left" href="#">
+                <i class="icon ion-ios7-pricetag"></i>
+                Subtotal Amount
+                <span class="item-note">
+                    {{subtotal|convertprice}}
+                </span>
+            </a>
+            <a class="item item-icon-left" href="#">
+                <i class="icon ion-ios7-pricetag"></i>
+                Discounted Amount
+                <span class="item-note">
+                     {{discountamount|convertprice}}
+                </span>
+            </a>
+            <a class="item item-icon-left">
+                <i class="icon ion-ios7-cart"></i>
+                Total Amount
+                <span class="item-note">
+                     {{subtotal-discountamount|convertprice}}
+                </span>
+            </a>
+        </div>
+
+        <div class="padding">
+            <a href="#/tab/cart/checkout">
+                <button class="button button-block button-royal">Proceed to checkout</button>
+            </a>
+        </div>
+
+    </ion-content>
+</ion-view>

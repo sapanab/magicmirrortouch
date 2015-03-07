@@ -1,0 +1,87 @@
+<ion-view title="MAGIC MIRROR TOUCH">
+    <ion-content class="has-header">
+        <center>
+            <a href="http://www.instagram.com/lyla_loves" target="_blank">
+                <img src="img/insta.png" class="socialicons">
+            </a>
+            <a href="https://www.twitter.com/lyla_loves" target="_blank">
+                <img src="img/twitter.png" class="socialicons">
+            </a>
+            <a href="https://www.facebook.com/lylaloves" target="_blank">
+                <img src="img/facebook.png" class="socialicons">
+            </a>
+            <a href="http://www.pinterest.com/lloves1548/" target="_blank">
+                <img src="img/pinterest.png" class="socialicons">
+            </a>
+            <a href="https://www.tumblr.com/blog/lylalovesblog" target="_blank">
+                <img src="img/tumbler.png" class="socialicons">
+            </a>
+
+            <div class="padding">
+                <a href="#/tab/dash">
+                    <img src="img/mlogo.png" style="width:40%;">
+                </a>
+            </div>
+            <div>
+                <img src="img/banner.jpg" width="100%"/>
+            </div>
+            <div class="pos">
+                <a href="#"><img class="mt-5" src="img/inpressions.jpg" width="100%"/></a>
+                <div class="text">
+                    <span>IMPRESSIONS OF EXCELLENCE</span>
+                    <div>
+                        <button class="btnview"><a href="#">View All</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="padding">
+                <div class="newsletterhome">
+                    <div class="row">
+                        <label class="item-input-wrapper royal">
+                            <input type="text" placeholder="Enter Email For Newsletter" ng-model="uemail" class="discountcoupon form-control newsletteremail " style="margin-right:5px;">
+                        </label>
+                        <button class="button button-royal button-small" ng-click="newsletter(uemail)">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+
+                
+<!--                <img src="img/3for2.jpg" style="width:90%;">                -->
+
+
+                <div class="hdtitle">WHATS TRENDING</div>
+
+                <div class="productset">
+                    <div class="imageset">
+                        <!--
+                            <a ng-click="slidesetprev(showslideset1);">
+                                <div class="toggle left">
+                                    <img src="img/leftbanner.png">
+                                </div>
+                            </a>
+                            <a ng-click="slidesetnext(showslideset1);">
+                                <div class="toggle right">
+                                    <img src="img/rightbanner.png">
+                                </div>
+                            </a>  
+-->
+                        <ion-scroll direction="x">
+                            <div class="row">
+                                <div class="col col-20" ng-repeat="slider in sliders">
+                                    <a href="#/tab/home/product/{{slider.link}}">
+                                        <img src="{{slider.image|imagepath}}" class="full-image">
+                                        <p class="royal productprice">{{slider.price|convertprice}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </ion-scroll>
+
+                    </div>
+                </div>
+
+            </div>
+        </center>
+    </ion-content>
+</ion-view>

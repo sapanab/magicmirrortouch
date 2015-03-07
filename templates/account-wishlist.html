@@ -1,0 +1,14 @@
+<ion-view title="My Wishlist">
+    <ion-content class="has-header">
+        <ion-list>
+            <div class="item" ng-show="wishlists == '';">
+               Wishlist is empty
+           </div>
+            <ion-item class="item-thumbnail-left" href="#/tab/account/wishlist/product/{{wishlist.id}}" ng-repeat="wishlist in wishlists">
+                <img ng-src="{{wishlist.image|imagepath}}">
+                <h2>{{wishlist.name}}</h2>
+                <h3 class="royal">{{wishlist.price|convertprice}}</h3>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
