@@ -1,35 +1,33 @@
 /* Empty. Add your own CSS if you like */
-
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
 @font-face {
-    font-family: 'Cheddar Jack';
-    src: url('CheddarJack.ttf');
-    font-weight: normal;
-}
-/*  Changes the name of the font. */
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('Raleway-Regular.otf');
+    font-family: 'Futura';
+    src: url('Futura_400.ttf');
     font-weight: normal;
 }
 @font-face {
-    font-family: 'Raleway';
-    src: url('Raleway-Light.otf');
+    font-family: 'Futura';
+    src: url('Futura_500.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Futura';
+    src: url('Futura_700.ttf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Futura';
+    src: url('Futura_300.ttf');
     font-weight: 300;
 }
-@font-face {
-    font-family: 'Raleway';
-    src: url('Raleway-Bold.otf');
-    font-weight: bold;
-}
 body {
-    font-family: 'Raleway' !important;
+    font-family: 'Futura' !important;
 }
 input,
 button,
 select,
 textarea {
-    font-family: 'Raleway' !important;
+    font-family: 'Futura' !important;
 }
 .full-image {
     width: 100%;
@@ -54,12 +52,11 @@ a {
 .pull-right {
     float: right;
 }
-.menu-title
-{
-    color:#4d5355 !important;
+.menu-title {
+    color: #4d5355 !important;
 }
 .royal {
-    color: #F32163  !important;
+    color: #e5097e !important;
 }
 .button-royal {
     background-color: #4d5355 !important;
@@ -83,7 +80,7 @@ a {
 }
 .bar.bar-royal .title {
     color: #FFF;
-    font-family: 'Cheddar Jack' !important;
+    font-family: 'Shadows Into Light' !important;
     font-size: 24px;
     text-transform: lowercase;
 }
@@ -96,6 +93,8 @@ a {
     border-bottom-width: 2px;
     background-color: #4d5355 !important;
     background-image: -webkit-linear-gradient(90deg, #d8f2ef, #d8f2ef 50%, transparent 50%) !important;
+    background-image: -moz-linear-gradient(90deg, #d8f2ef, #d8f2ef 50%, transparent 50%) !important;
+    background-image: -o-linear-gradient(90deg, #d8f2ef, #d8f2ef 50%, transparent 50%) !important;
     background-image: linear-gradient(0deg, #d8f2ef, #d8f2ef 50%, transparent 50%) !important;
     color: #FFF !important;
 }
@@ -115,7 +114,7 @@ h6,
 strong,
 p {
     color: #a8a8a8;
-    font-family: 'Raleway' !important;
+    font-family: 'Futura' !important;
 }
 .tabs {
     background-color: #43494b !important;
@@ -123,7 +122,7 @@ p {
     color: #fff !important;
 }
 .tab-item {
-    font-family: 'Raleway' !important;
+    font-family: 'Futura' !important;
 }
 .checkbox input:checked:before,
 .checkbox input:checked + .checkbox-icon:before {
@@ -140,7 +139,7 @@ p {
     padding: 2px;
 }
 .bar .button.back-button {
-    color: #696969;
+    color: #fff;
 }
 .slider-pager .slider-pager-page {
     color: #696969;
@@ -160,7 +159,7 @@ img.socialicons {
     width: 10%;
 }
 .item-divider {
-    font-family: 'Cheddar Jack';
+    font-family: 'Shadows Into Light';
     font-size: 21px;
 }
 .imageset {
@@ -196,20 +195,20 @@ img.socialicons {
 }
 .tabs .tab-item .badge.badge-royal,
 .badge.badge-royal {
-    background-color: #F32163 !important;
+    background-color: #e5097e !important;
     color: #fff;
 }
 .imageheight {
     overflow: hidden
 }
 .button-royal2 {
-    background: #F32163 !important;
-    border-color: #F32163 !important;
+    background: #e5097e !important;
+    border-color: #e5097e !important;
     color: white;
 }
 .button-royal3 {
-    background: #3CE995 !important;
-    border-color: #3CE995 !important;
+    background: #009846 !important;
+    border-color: #009846 !important;
     color: white;
 }
 .button-bold {
@@ -225,48 +224,41 @@ img.socialicons {
     padding: 12px;
     margin-bottom: 5px;
 }
-.hdtitle
-{
+.hdtitle {
     padding: 20px 0px;
-width: 90%;
-color: #4D5355;
-font-weight: bold;
-    font-family: 'Cheddar Jack' !important;
+    width: 90%;
+    color: #4D5355;
+    font-weight: bold;
+    font-family: 'Shadows Into Light' !important;
     font-size: 18px;
 }
-.item-input-wrapper
-{
-padding-right: 0px; 
- padding-left: 0px; 
- background: transparent; 
+.item-input-wrapper {
+    padding-right: 0px;
+    padding-left: 0px;
+    background: transparent;
 }
-input.discountcoupon.form-control.newsletteremail.ng-pristine.ng-valid
-{
-    padding-left:10px;
+input.discountcoupon.form-control.newsletteremail.ng-pristine.ng-valid {
+    padding-left: 10px;
 }
-.mt-5{
-    margin-top:-5px;
+.mt-5 {
+    margin-top: -5px;
 }
-.pos
-{
-position: relative;
+.pos {
+    position: relative;
 }
-.text
-{
-position: absolute;
-text-align: center;
-top: 20%;
-width: 100%;
-text-transform: uppercase;
-    font-size: 8px;
+.text {
+    position: absolute;
+    text-align: center;
+    top: 20px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 250%;
 }
-.btnview
-{
-background: transparent!important;
-border: 1px solid rgb(77, 83, 85);
-font-size: 10px;
-}
-.btnview a
-{
-  color: rgb(77, 83, 85) !important;  
+.btnview {
+    background: transparent!important;
+    border: 1px solid #4D5355;
+    font-size: 14px;
+    color: #4D5355;
+    padding: 4px 10px;
 }

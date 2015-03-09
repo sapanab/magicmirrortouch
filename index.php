@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title>Magic mirror touch</title>
+    <title>Magic Mirror</title>
     <link rel="shortcut icon" href="img/logo.png">
     
     <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
