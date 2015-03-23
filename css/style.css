@@ -1,33 +1,29 @@
 /* Empty. Add your own CSS if you like */
 @import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
 @font-face {
-    font-family: 'Futura';
-    src: url('Futura_400.ttf');
+    font-family: 'Raspoutine';
+    src: url('RaspoutineClassic_TB.otf');
     font-weight: normal;
 }
 @font-face {
-    font-family: 'Futura';
-    src: url('Futura_500.ttf');
+    font-family: 'Raspoutine';
+    src: url('RaspoutineMedium_TB.otf');
     font-weight: 500;
 }
 @font-face {
-    font-family: 'Futura';
-    src: url('Futura_700.ttf');
+    font-family: 'Raspoutine';
+    src: url('RaspoutineDemiBold_TB.otf');
     font-weight: 700;
 }
-@font-face {
-    font-family: 'Futura';
-    src: url('Futura_300.ttf');
-    font-weight: 300;
-}
+
 body {
-    font-family: 'Futura' !important;
+    font-family: 'Raspoutine' !important;
 }
 input,
 button,
 select,
 textarea {
-    font-family: 'Futura' !important;
+    font-family: 'Raspoutine' !important;
 }
 .full-image {
     width: 100%;
@@ -80,7 +76,7 @@ a {
 }
 .bar.bar-royal .title {
     color: #FFF;
-    font-family: 'Shadows Into Light' !important;
+    font-family: 'Raspoutine' !important;
     font-size: 24px;
     text-transform: lowercase;
 }
@@ -114,7 +110,7 @@ h6,
 strong,
 p {
     color: #a8a8a8;
-    font-family: 'Futura' !important;
+    font-family: 'Raspoutine' !important;
 }
 .tabs {
     background-color: #43494b !important;
@@ -122,7 +118,7 @@ p {
     color: #fff !important;
 }
 .tab-item {
-    font-family: 'Futura' !important;
+    font-family: 'Raspoutine' !important;
 }
 .checkbox input:checked:before,
 .checkbox input:checked + .checkbox-icon:before {
@@ -159,7 +155,7 @@ img.socialicons {
     width: 10%;
 }
 .item-divider {
-    font-family: 'Shadows Into Light';
+    font-family: 'Raspoutine';
     font-size: 21px;
 }
 .imageset {
@@ -229,7 +225,7 @@ img.socialicons {
     width: 90%;
     color: #4D5355;
     font-weight: bold;
-    font-family: 'Shadows Into Light' !important;
+    font-family: 'Raspoutine' !important;
     font-size: 18px;
 }
 .item-input-wrapper {
