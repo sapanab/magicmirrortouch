@@ -1,0 +1,19 @@
+application: magicmirrormobile
+version: 1
+runtime: php
+api_version: 1
+threadsafe: no
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /(.+\.(gif|png|jpg|css|js|html|eot|woff|ttf|svg|otf))$
+  static_files: \1
+  upload: .+\.(gif|png|jpg|css|js|html|eot|woff|ttf|svg|otf)$
+  application_readable: true
+
+
+- url: /.*
+  script: index.php

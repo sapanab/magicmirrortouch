@@ -61,7 +61,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices'])
             }
         }
     })
-    
+
     .state('tab.thankyou', {
         url: '/thankyou',
         views: {
@@ -71,7 +71,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices'])
             }
         }
     })
-    
+
     .state('tab.items', {
         url: '/dash/categories/:cid',
         views: {
@@ -250,26 +250,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices'])
 
 
 .filter('imagepath', function () {
-    return function (input) {
-        var prosubstr=input.substring(0, 5);
-        //console.log(prosubstr);
-        if (prosubstr == "gs://") {
-            return "http://www.lylaloves.co.uk/showimage?size=300&image="+input;
-        } else {
-            return "http://www.lylaloves.co.uk/showimage?size=300&image=gs://lylaimages/images"+input;
-        }
-    };
+  return function (input) {
+      return "http://magicmirrornew.appspot.com/showimage?size=300&image=gs://magicmirroruploads/uploads/"+input.trim();
+  };
 })
 .filter('imagepathbig', function () {
-    return function (input) {
-        var prosubstr=input.substring(0, 5);
-        //console.log(prosubstr);
-        if (prosubstr == "gs://") {
-            return "http://www.lylaloves.co.uk/showimage?size=800&image="+input;
-        } else {
-            return "http://www.lylaloves.co.uk/showimage?size=800&image=gs://lylaimages/images"+input;
-        }
-    };
+  return function (input) {
+      return "http://magicmirrornew.appspot.com/showimage?size=800&image=gs://magicmirroruploads/uploads/"+input.trim();
+  };
 })
 .filter('inSlicesOf', ['$rootScope',
          function ($rootScope) {
@@ -306,7 +294,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices'])
                      return function(amount, currencySymbol) {
                          var value = currencyFilter(amount, currencySymbol);
                          var sep = value.indexOf(formats.DECIMAL_SEP);
-                         if(amount >= 0) { 
+                         if(amount >= 0) {
                              return value.substring(0, sep);
                          }
                          return value.substring(0, sep) + ')';

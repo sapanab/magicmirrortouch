@@ -6,7 +6,7 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>Magic Mirror</title>
     <link rel="shortcut icon" href="img/logo.png">
-    
+
     <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
     <link href="lib/ionic/css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -15,37 +15,37 @@
     <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
-    
+
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.min.js"></script>
-    
-<!--
-    <script>
-        var isMobile = {
-            Android: function () {
-                return navigator.userAgent.match(/Android/i);
-            },
-            BlackBerry: function () {
-                return navigator.userAgent.match(/BlackBerry/i);
-            },
-            iOS: function () {
-                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-            },
-            Opera: function () {
-                return navigator.userAgent.match(/Opera Mini/i);
-            },
-            Windows: function () {
-                return navigator.userAgent.match(/IEMobile/i);
-            },
-            any: function () {
-                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-            }
-        };
 
-        
-    </script>
--->
-    
+    <script>
+            var isMobile = {
+                Android: function () {
+                    return navigator.userAgent.match(/Android/i);
+                },
+                BlackBerry: function () {
+                    return navigator.userAgent.match(/BlackBerry/i);
+                },
+                iOS: function () {
+                    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+                },
+                Opera: function () {
+                    return navigator.userAgent.match(/Opera Mini/i);
+                },
+                Windows: function () {
+                    return navigator.userAgent.match(/IEMobile/i);
+                },
+                any: function () {
+                    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+                }
+            };
+
+            if (!isMobile.any()) {
+                window.location = "http://www.magicmirror.in"+window.location.hash;
+            }
+        </script>
+
     <!-- cordova script (this will be a 404 during development) -->
     <!--    <script src="cordova.js"></script>-->
 

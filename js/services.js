@@ -1,4 +1,4 @@
-var adminurl = 'http://wohlig.co.in/admin/index.php/json/';
+var adminurl = 'http://www.magicmirror.in/admin/index.php/json/';
 
 var conversionrate = [{
     id: "1",
@@ -132,7 +132,7 @@ var myservices = angular.module('myservices', [])
     var coupondetails=$.jStorage.get("coupon");
     var discount=$.jStorage.get("coupon");
     return {
-        getobj : function() 
+        getobj : function()
         {
             return obj;
         },
