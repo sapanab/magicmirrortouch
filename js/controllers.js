@@ -76,24 +76,39 @@ angular.module('starter.controllers', ['myservices'])
     var change = 11;
     var counter = 0;
     $scope.products = [];
+    $scope.pageno=1;
     var onsuccess = function (data, status) {
-        $scope.products = data;
-        $scope.loadMore();
+        console.log(data);
+          for (var i = 0; i < data.queryresult.length; i++) {
+            $scope.productItem.push(data.queryresult[i]);
+          }
+          if (data.lastpage > $scope.pageno) {
+              $scope.pageno = $scope.pageno + 1;
+          } else {
+              $scope.$broadcast('scroll.infiniteScrollComplete');
+          }
 
     };
     MyServices.getproductbycategory(categoryId).success(onsuccess);
-
+    var oldpage = 0;
     $scope.loadMore = function () {
-        var sum = counter + change;
-        if (sum > $scope.products.product.length) {
-            sum = $scope.products.product.length;
-        }
-        for (var i = counter; i <= sum; i++) {
-            $scope.productItem.push($scope.products.product[i]);
-        };
-        counter += change + 1;
-        $scope.$broadcast('scroll.infiniteScrollComplete');
+
+      console.log("ADD MORE: "+oldpage);
+            if (oldpage != $scope.pageno) {
+                oldpage = $scope.pageno;
+                MyServices.getproductbycategory(categoryId, $scope.pageno).success(onsuccess);
+            }
+        // var sum = counter + change;
+        // if (sum > $scope.products.product.length) {
+        //     sum = $scope.products.product.length;
+        // }
+        // for (var i = counter; i <= sum; i++) {
+        //     $scope.productItem.push($scope.products.product[i]);
+        // };
+        // counter += change + 1;
+        // $scope.$broadcast('scroll.infiniteScrollComplete');
     };
+    $scope.loadMore();
 
 
 })
@@ -302,7 +317,7 @@ angular.module('starter.controllers', ['myservices'])
         maxWidth: 200,
         showDelay: 500
     });
-    
+
     $scope.discountamount = 0;
 
     function calcdiscountamount() {
@@ -912,7 +927,7 @@ angular.module('starter.controllers', ['myservices'])
     //        //MainJson.orderitem($scope.cart);
     //        $scope.form.cart = $scope.cart;
     //        $scope.form.user = $scope.id;
-    //        $scope.form.status = $scope.status; //MainJson.placeorder(form.firstname,form.lastname,form.email,form.company,form.billingaddress,form.billingcity,form.billingstate,form.billingpincode,form.billingcountry,form.phone,form.fax,form.shippingaddress,form.shippingcity,form.shippingstate,form.shippingpincode,form.shippingcountry,$scope.id,$scope.status).success(orderplaced); 
+    //        $scope.form.status = $scope.status; //MainJson.placeorder(form.firstname,form.lastname,form.email,form.company,form.billingaddress,form.billingcity,form.billingstate,form.billingpincode,form.billingcountry,form.phone,form.fax,form.shippingaddress,form.shippingcity,form.shippingstate,form.shippingpincode,form.shippingcountry,$scope.id,$scope.status).success(orderplaced);
     //        MyServices.placeorder(form).success(orderplaced);
     //    }
 

@@ -6,10 +6,11 @@
         </div>
         <div class="row productsCol" ng-repeat="pros in productItem | inSlicesOf:3">
             <div class="col col-33 text-center" ng-repeat="pro in pros">
+  
                 <a href="#/tab/dash/categories/product/{{pro.id}}">
                     <div class="productItem">
                         <div class="imageheight" style="width:{{imagewidth.width}}px;height:{{imagewidth.width}}px;">
-                            <img ng-src="{{pro.productimage[0].image|imagepath}}" class="full-image"> 
+                            <img ng-src="{{pro.image2|imagepath}}" class="full-image">
                         </div>
                         <p class="royal productprice">{{pro.price|convertprice}}</p>
                     </div>
