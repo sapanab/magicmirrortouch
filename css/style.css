@@ -200,7 +200,7 @@ img.socialicons {
 }
 
 .imageset {
-    width: 95%;
+    width: 100%;
     border: 10px solid #f7f7f7;
     height: auto;
     position: relative;
@@ -277,13 +277,14 @@ img.socialicons {
 }
 
 .hdtitle {
-    padding: 20px 0px;
-    width: 90%;
+    padding: 5px 0px;
+    width: 100%;
     color: #4D5355;
     font-weight: bold;
     font-family: 'futura' !important;
     -webkit-font-smoothing: antialiased;
-    font-size: 18px;
+    font-size: 15px;
+    border-bottom: 1px solid #ddd;
 }
 
 .item-input-wrapper {
@@ -304,14 +305,19 @@ input.discountcoupon.form-control.newsletteremail.ng-pristine.ng-valid {
     position: relative;
 }
 
+.productset {
+    margin-top: -5px;
+}
+
 .text {
     position: absolute;
     text-align: center;
-    top: 20px;
+    top: 3px;
     width: 100%;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 11px;
     line-height: 250%;
+    font-weight: 500;
 }
 
 .btnview {

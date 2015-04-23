@@ -13,10 +13,47 @@ angular.module('starter.controllers', ['myservices'])
 
 .controller('HomeCtrl', function ($scope, $stateParams, MyServices) {
 
-    var slidersuccess = function (data, status) {
-        $scope.sliders = data;
-    };
-    MyServices.getallslider().success(slidersuccess);
+    //    var slidersuccess = function (data, status) {
+    //        $scope.sliders = data;
+    //    };
+    //    MyServices.getallslider().success(slidersuccess);
+
+    $scope.sliders = [{
+        "id": "1",
+        "image": "img/up1.png",
+        "link": "1",
+        "name": "Bangles"
+
+                }, {
+        "id": "2",
+        "image": "img/up2.png",
+        "link": "19",
+        "name": "Necklace"
+
+                }, {
+        "id": "3",
+        "image": "img/up3.png",
+        "link": "20",
+        "name": "Rings"
+
+                }, {
+        "id": "4",
+        "image": "img/up4.png",
+        "link": "21",
+        "name": "Earings"
+
+                }, {
+        "id": "5",
+        "image": "img/up5.png",
+        "link": "22",
+        "name": "Juda"
+
+                }, {
+        "id": "6",
+        "image": "img/up6.png",
+        "link": "23",
+        "name": "Payal"
+                }];
 
     //newsletter
     var newslettersaved = function (data, status) {
@@ -76,28 +113,28 @@ angular.module('starter.controllers', ['myservices'])
     var change = 11;
     var counter = 0;
     $scope.products = [];
-    $scope.pageno=1;
+    $scope.pageno = 1;
     var onsuccess = function (data, status) {
         console.log(data);
-          for (var i = 0; i < data.queryresult.length; i++) {
+        for (var i = 0; i < data.queryresult.length; i++) {
             $scope.productItem.push(data.queryresult[i]);
-          }
-          if (data.lastpage > $scope.pageno) {
-              $scope.pageno = $scope.pageno + 1;
-          } else {
-              $scope.$broadcast('scroll.infiniteScrollComplete');
-          }
+        }
+        if (data.lastpage > $scope.pageno) {
+            $scope.pageno = $scope.pageno + 1;
+        } else {
+            $scope.$broadcast('scroll.infiniteScrollComplete');
+        }
 
     };
     MyServices.getproductbycategory(categoryId).success(onsuccess);
     var oldpage = 0;
     $scope.loadMore = function () {
 
-      console.log("ADD MORE: "+oldpage);
-            if (oldpage != $scope.pageno) {
-                oldpage = $scope.pageno;
-                MyServices.getproductbycategory(categoryId, $scope.pageno).success(onsuccess);
-            }
+        console.log("ADD MORE: " + oldpage);
+        if (oldpage != $scope.pageno) {
+            oldpage = $scope.pageno;
+            MyServices.getproductbycategory(categoryId, $scope.pageno).success(onsuccess);
+        }
         // var sum = counter + change;
         // if (sum > $scope.products.product.length) {
         //     sum = $scope.products.product.length;
@@ -460,7 +497,7 @@ angular.module('starter.controllers', ['myservices'])
 
     $scope.showpaywithcard = false;
     $scope.showplaceorder = true;
-    $scope.cart=[];
+    $scope.cart = [];
     var onsuccess = function (data, status) {
         $scope.products = data;
         $scope.cart = data;
