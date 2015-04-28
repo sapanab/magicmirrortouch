@@ -7,8 +7,6 @@ angular.module('starter.controllers', ['myservices'])
         $scope.obj = MyServices.getobj();
     }
     MyServices.gettotalcart().success(totalcartsuccess);
-
-
 })
 
 .controller('HomeCtrl', function ($scope, $stateParams, MyServices) {
@@ -938,8 +936,8 @@ angular.module('starter.controllers', ['myservices'])
         console.log(form);
         console.log("amount:" + amount);
         handler.open({
-            name: 'Lyla Loves',
-            description: 'Total Amount: £ ' + amount,
+            name: 'Magic Mirror',
+            description: 'Total Amount: Rs ' + amount,
             amount: amount * 100,
 
         });
@@ -1036,7 +1034,7 @@ angular.module('starter.controllers', ['myservices'])
             $location.url("#/account/login");
             MyServices.signupemail(data.email).success(emailsend);
         } else {
-            $scope.msgr = "Error In Registration";
+            $scope.msgr = "This Email is already registered with us.";
         }
     };
     $scope.signup = function (register) {

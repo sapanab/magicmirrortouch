@@ -75,6 +75,21 @@
                         </div>
                     </ion-scroll>
                 </div>
+            </div>    
+                       <div class="productset">
+                <div class="imageset">
+                    <div class="hdtitle">Most Trending</div>
+                    <ion-scroll direction="x">
+                        <div class="row">
+                            <div class="col col-25" ng-repeat="slider in sliders">
+                                <a href="#/tab/dash/categories/{{slider.link}}">
+                                    <img src="{{slider.image}}" class="full-image">
+                                    <p class="royal productprice">{{slider.name}}</p>
+                                </a>
+                            </div>
+                        </div>
+                    </ion-scroll>
+                </div>
             </div>
 
 
