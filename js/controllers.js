@@ -11,47 +11,47 @@ angular.module('starter.controllers', ['myservices'])
 
 .controller('HomeCtrl', function ($scope, $stateParams, MyServices) {
 
-    //    var slidersuccess = function (data, status) {
-    //        $scope.sliders = data;
-    //    };
-    //    MyServices.getallslider().success(slidersuccess);
+        var slidersuccess = function (data, status) {
+            $scope.sliders = data;
+        };
+        MyServices.getallslider().success(slidersuccess);
 
-    $scope.sliders = [{
-        "id": "1",
-        "image": "img/up1.png",
-        "link": "1",
-        "name": "Bangles"
-
-                }, {
-        "id": "2",
-        "image": "img/up2.png",
-        "link": "19",
-        "name": "Necklace"
-
-                }, {
-        "id": "3",
-        "image": "img/up3.png",
-        "link": "20",
-        "name": "Rings"
-
-                }, {
-        "id": "4",
-        "image": "img/up4.png",
-        "link": "21",
-        "name": "Earings"
-
-                }, {
-        "id": "5",
-        "image": "img/up5.png",
-        "link": "22",
-        "name": "Juda"
-
-                }, {
-        "id": "6",
-        "image": "img/up6.png",
-        "link": "23",
-        "name": "Payal"
-                }];
+//    $scope.sliders = [{
+//        "id": "1",
+//        "image": "img/up1.png",
+//        "link": "1",
+//        "name": "Bangles"
+//
+//                }, {
+//        "id": "2",
+//        "image": "img/up2.png",
+//        "link": "19",
+//        "name": "Necklace"
+//
+//                }, {
+//        "id": "3",
+//        "image": "img/up3.png",
+//        "link": "20",
+//        "name": "Rings"
+//
+//                }, {
+//        "id": "4",
+//        "image": "img/up4.png",
+//        "link": "21",
+//        "name": "Earings"
+//
+//                }, {
+//        "id": "5",
+//        "image": "img/up5.png",
+//        "link": "22",
+//        "name": "Juda"
+//
+//                }, {
+//        "id": "6",
+//        "image": "img/up6.png",
+//        "link": "23",
+//        "name": "Payal"
+//                }];
 
     //newsletter
     var newslettersaved = function (data, status) {
