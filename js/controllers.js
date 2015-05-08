@@ -16,42 +16,67 @@ angular.module('starter.controllers', ['myservices'])
         };
         MyServices.getallslider().success(slidersuccess);
 
-//    $scope.sliders = [{
-//        "id": "1",
-//        "image": "img/up1.png",
-//        "link": "1",
-//        "name": "Bangles"
-//
-//                }, {
-//        "id": "2",
-//        "image": "img/up2.png",
-//        "link": "19",
-//        "name": "Necklace"
-//
-//                }, {
-//        "id": "3",
-//        "image": "img/up3.png",
-//        "link": "20",
-//        "name": "Rings"
-//
-//                }, {
-//        "id": "4",
-//        "image": "img/up4.png",
-//        "link": "21",
-//        "name": "Earings"
-//
-//                }, {
-//        "id": "5",
-//        "image": "img/up5.png",
-//        "link": "22",
-//        "name": "Juda"
-//
-//                }, {
-//        "id": "6",
-//        "image": "img/up6.png",
-//        "link": "23",
-//        "name": "Payal"
-//                }];
+    $scope.sliderss = [{
+        "id": "1",
+        "image": "img/up1.png",
+        "link": "/category/AD-NECKLACE-SET",
+        "name": "Bangle"
+
+                }, {
+        "id": "2",
+        "image": "img/up2.png",
+        "link": "/category/AD-NECKLACE-SET",
+        "name": "Necklace"
+
+                }, {
+        "id": "3",
+        "image": "img/up3.png",
+        "link": "/category/FingerRing",
+        "name": "Rings"
+
+                }, {
+        "id": "4",
+        "image": "img/up4.png",
+        "link": "/category/Corporate-Earings",
+        "name": "Earings"
+
+                }, {
+        "id": "5",
+        "image": "img/up5.png",
+        "link": "/category/AQ-JUDA",
+        "name": "Juda"
+
+                }, {
+        "id": "6",
+        "image": "img/up6.png",
+        "link": "/category/AD-PAYAL",
+        "name": "Payal"
+                }];    
+    $scope.slidersss = [{
+        "id": "1",
+        "image": "img/p1.png",
+        "link": "/category/AD-NECKLACE-SET",
+        "name": "American Diamond"
+
+                }, {
+        "id": "2",
+        "image": "img/p2.png",
+        "link": "/category/Pearl-Mala",
+        "name": "Pearl"
+
+                }, {
+        "id": "3",
+        "image": "img/p3.png",
+        "link": "/category/AQ-VICTORIA-SET",
+        "name": "Antique"
+
+                }, {
+        "id": "4",
+        "image": "img/p4.png",
+        "link": "/category/MICRO-SET",
+        "name": "Micro Set"
+                    
+                }];
 
     //newsletter
     var newslettersaved = function (data, status) {
