@@ -19,61 +19,61 @@ angular.module('starter.controllers', ['myservices'])
     $scope.sliderss = [{
         "id": "1",
         "image": "img/up1.png",
-        "link": "/category/AD-NECKLACE-SET",
+        "link": "AD-NECKLACE-SET",
         "name": "Bangle"
 
                 }, {
         "id": "2",
         "image": "img/up2.png",
-        "link": "/category/AD-NECKLACE-SET",
+        "link": "AD-NECKLACE-SET",
         "name": "Necklace"
 
                 }, {
         "id": "3",
         "image": "img/up3.png",
-        "link": "/category/FingerRing",
+        "link": "FingerRing",
         "name": "Rings"
 
                 }, {
         "id": "4",
         "image": "img/up4.png",
-        "link": "/category/Corporate-Earings",
+        "link": "Corporate-Earings",
         "name": "Earings"
 
                 }, {
         "id": "5",
         "image": "img/up5.png",
-        "link": "/category/AQ-JUDA",
+        "link": "AQ-JUDA",
         "name": "Juda"
 
                 }, {
         "id": "6",
         "image": "img/up6.png",
-        "link": "/category/AD-PAYAL",
+        "link": "AD-PAYAL",
         "name": "Payal"
                 }];    
     $scope.slidersss = [{
         "id": "1",
         "image": "img/p1.png",
-        "link": "/category/AD-NECKLACE-SET",
+        "link": "AD-NECKLACE-SET",
         "name": "American Diamond"
 
                 }, {
         "id": "2",
         "image": "img/p2.png",
-        "link": "/category/Pearl-Mala",
+        "link": "Pearl-Mala",
         "name": "Pearl"
 
                 }, {
         "id": "3",
         "image": "img/p3.png",
-        "link": "/category/AQ-VICTORIA-SET",
+        "link": "AQ-VICTORIA-SET",
         "name": "Antique"
 
                 }, {
         "id": "4",
         "image": "img/p4.png",
-        "link": "/category/MICRO-SET",
+        "link": "MICRO-SET",
         "name": "Micro Set"
                     
                 }];
