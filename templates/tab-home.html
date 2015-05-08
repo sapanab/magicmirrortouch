@@ -3,7 +3,7 @@
         <center>
             <div class="padding">
                 <a href="#/tab/dash">
-                    <img src="img/mlogo.png" style="width:70%;">
+                    <img src="img/mlogo.png" style="width:85%;">
                 </a>
             </div>
             <ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="true" show-pager="false" auto-play="3000">
@@ -33,9 +33,22 @@
                     </div>
                 </ion-slide>
             </ion-slide-box>
+            <!--
+<div class="pos">
+    <a href="#">
+        <img class="mt-5" src="img/inpressions.jpg" width="100%" />
+    </a>
+    <div class="text">
+        <span>IMPRESSIONS OF EXCELLENCE</span>
+        <div>
+            <a href="#/tab/dash" class="btnview">View All</a>
+        </div>
+    </div>
+</div>
+-->
             <div class="pos">
                 <a href="#">
-                    <img class="mt-5" src="img/inpressions.jpg" width="100%" />
+                    <img class="mt-5" src="img/back2.jpg" width="100%" />
                 </a>
                 <div class="text">
                     <span>IMPRESSIONS OF EXCELLENCE</span>
@@ -44,23 +57,37 @@
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="hdtitle">WHATS TRENDING</div>
-
             <div class="productset">
                 <div class="imageset">
+                    <div class="hdtitle">Categories</div>
                     <ion-scroll direction="x">
                         <div class="row">
-                            <div class="col col-20" ng-repeat="slider in sliders">
-                                <a href="#/tab/home/product/{{slider.link}}">
-                                    <img src="{{slider.image|imagepath}}" class="full-image">
-                                    <p class="royal productprice">{{slider.price|convertprice}}</p>
+                            <div class="col col-25" ng-repeat="slider in sliders">
+                                <a href="#/tab/dash/categories/{{slider.link}}">
+                                    <img src="{{slider.image}}" class="full-image">
+                                    <p class="royal productprice">{{slider.name}}</p>
                                 </a>
                             </div>
                         </div>
                     </ion-scroll>
                 </div>
-            </div> -->
+            </div>    
+                       <div class="productset">
+                <div class="imageset">
+                    <div class="hdtitle">Most Trending</div>
+                    <ion-scroll direction="x">
+                        <div class="row">
+                            <div class="col col-25" ng-repeat="slider in sliders">
+                                <a href="#/tab/dash/categories/{{slider.link}}">
+                                    <img src="{{slider.image}}" class="full-image">
+                                    <p class="royal productprice">{{slider.name}}</p>
+                                </a>
+                            </div>
+                        </div>
+                    </ion-scroll>
+                </div>
+            </div>
+
 
         </center>
     </ion-content>

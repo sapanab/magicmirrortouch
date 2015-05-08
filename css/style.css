@@ -253,11 +253,12 @@ input.discountcoupon.form-control.newsletteremail.ng-pristine.ng-valid {
 .text {
     position: absolute;
     text-align: center;
-    top: 20px;
+    top: 38px;
     width: 100%;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 11px;
     line-height: 250%;
+    font-weight: 500;
 }
 .btnview {
     background: transparent!important;
