@@ -6,23 +6,19 @@
     src: url('futura-light.woff');
     font-weight: normal;
 }
-
 @font-face {
     font-family: 'futura';
     src: url('futura-book.woff');
     font-weight: 500;
 }
-
 @font-face {
     font-family: 'futura';
     src: url('futura-bold.woff');
     font-weight: 700;
 }
-
 body {
     font-family: 'futura' !important;
 }
-
 input,
 button,
 select,
@@ -30,15 +26,12 @@ textarea {
     font-family: 'futura' !important;
     -webkit-font-smoothing: antialiased;
 }
-
 .full-image {
     width: 100%;
 }
-
 a {
     text-decoration: none !important;
 }
-
 .menu-name {
     position: relative;
     top: -60px;
@@ -50,47 +43,38 @@ a {
     margin-bottom: -50px;
     text-align: center;
 }
-
 .pull-left {
     float: left;
 }
-
 .pull-right {
     float: right;
 }
-
 .menu-title {
     color: #4d5355 !important;
 }
-
 .royal {
     color: #e5097e !important;
 }
-
 .button-royal {
     background-color: #4d5355 !important;
     border-color: #4d5355 !important;
     color: #fff !important;
 }
-
 .button-positive {
     border-color: #4d5355 !important;
     background-color: #4d5355 !important;
     color: #fff !important;
 }
-
 .button-balanced {
     border-color: #4d5355 !important;
     background-color: #4d5355 !important;
     color: #fff !important;
 }
-
 .button-outline.button-balanced {
     border-color: #39CE86 !important;
     background-color: #fff !important;
     color: #39CE86 !important;
 }
-
 .bar.bar-royal .title {
     color: #FFF;
     font-family: 'futura' !important;
@@ -98,11 +82,9 @@ a {
     font-size: 24px;
     text-transform: lowercase;
 }
-
 .bar.bar-royal .title:first-letter {
     text-transform: uppercase !important;
 }
-
 .bar-royal {
     background-color: #d8f2ef !important;
     border-color: #4d5355 !important;
@@ -114,17 +96,14 @@ a {
     background-image: linear-gradient(0deg, #d8f2ef, #d8f2ef 50%, transparent 50%) !important;
     color: #FFF !important;
 }
-
 .tabs .tab-item {
     color: #FFF;
 }
-
 .item {
     color: #5C5C5C !important;
     font-size: 14px;
     font-weight: 500;
 }
-
 h1,
 h2,
 h3,
@@ -137,44 +116,35 @@ p {
     font-family: 'futura' !important;
     -webkit-font-smoothing: antialiased;
 }
-
 .tabs {
     background-color: #43494b !important;
     border-color: #43494b !important;
     color: #fff !important;
 }
-
 .tab-item {
     font-family: 'futura' !important;
     -webkit-font-smoothing: antialiased;
 }
-
 .checkbox input:checked:before,
 .checkbox input:checked + .checkbox-icon:before {
     background: #03e1e4;
 }
-
 .checkbox input:before,
 .checkbox .checkbox-icon:before {
     border-color: #03e1e4;
 }
-
 .lookbook img {
     padding: 0 10px;
 }
-
 .productsCol .col {
     padding: 2px;
 }
-
 .bar .button.back-button {
     color: #fff;
 }
-
 .slider-pager .slider-pager-page {
     color: #696969;
 }
-
 .numeric {
     width: 55px;
     text-align: center;
@@ -183,91 +153,73 @@ p {
     padding: 0 10px;
     color: #a8a8a8 !important;
 }
-
 .tabs-striped .tab-item + .tab-item:before {
     border-left: 0px solid #ccc;
 }
-
 img.socialicons {
     width: 10%;
 }
-
 .item-divider {
     font-family: 'futura';
     -webkit-font-smoothing: antialiased;
     font-size: 21px;
     font-family: 500!important;
 }
-
 .imageset {
     width: 95%;
     border: 10px solid #f7f7f7;
     height: auto;
     position: relative;
 }
-
 .toggle {
     position: absolute;
     top: 40%;
     z-index: 10;
 }
-
 .toggle.left {
     left: -30px;
 }
-
 .toggle.right {
     right: -30px;
 }
-
 .productsCol+.productsCol {
     border-top: 1px solid #ccc;
 }
-
 .productprice {
     position: relative;
     bottom: 0;
 }
-
 .productItem {
     position: relative;
 }
-
 .input-label {
     color: #A3A3A3;
     font-weight: 500;
 }
-
 .tabs .tab-item .badge.badge-royal,
 .badge.badge-royal {
     background-color: #e5097e !important;
     color: #fff;
 }
-
 .imageheight {
     overflow: hidden
 }
-
 .button-royal2 {
     background: #e5097e !important;
     border-color: #e5097e !important;
     color: white;
 }
-
 .button-royal3 {
     background: #009846 !important;
     border-color: #009846 !important;
     color: white;
 }
-
 .button-bold {
     font-weight: bold;
 }
-
 .ng-invalid.ng-dirty {
     border: 1px solid red;
 }
-
 .newsletterhome {
     background: #e2e2e2;
     margin-left: 5%;
@@ -275,7 +227,6 @@ img.socialicons {
     padding: 12px;
     margin-bottom: 5px;
 }
-
 .hdtitle {
     padding: 20px 0px;
     width: 90%;
@@ -285,25 +236,20 @@ img.socialicons {
     -webkit-font-smoothing: antialiased;
     font-size: 18px;
 }
-
 .item-input-wrapper {
     padding-right: 0px;
     padding-left: 0px;
     background: transparent;
 }
-
 input.discountcoupon.form-control.newsletteremail.ng-pristine.ng-valid {
     padding-left: 10px;
 }
-
 .mt-5 {
     margin-top: -5px;
 }
-
 .pos {
     position: relative;
 }
-
 .text {
     position: absolute;
     text-align: center;
@@ -314,7 +260,6 @@ input.discountcoupon.form-control.newsletteremail.ng-pristine.ng-valid {
     line-height: 250%;
     font-weight: 500;
 }
-
 .btnview {
     background: transparent!important;
     border: 1px solid #4D5355;
@@ -322,7 +267,20 @@ input.discountcoupon.form-control.newsletteremail.ng-pristine.ng-valid {
     color: #4D5355;
     padding: 4px 10px;
 }
+<<<<<<< HEAD
 a.item-content {
   color: #5C5C5C;
   font-weight: 500;
+=======
+.button.logcon {
+  background-image: url('../img/logo_mm.png');
+  background-color: transparent;
+  border: 0;
+  width: 29px;
+  height: 28px;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+>>>>>>> origin/master
 }

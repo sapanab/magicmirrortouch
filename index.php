@@ -21,6 +21,24 @@
 
     <script>
         var isMobile = {
+<<<<<<< HEAD
+            Android: function() {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function() {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function() {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function() {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function() {
+                return navigator.userAgent.match(/IEMobile/i);
+            },
+            any: function() {
+=======
             Android: function () {
                 return navigator.userAgent.match(/Android/i);
             },
@@ -37,6 +55,7 @@
                 return navigator.userAgent.match(/IEMobile/i);
             },
             any: function () {
+>>>>>>> origin/master
                 return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
             }
         };
@@ -61,6 +80,9 @@
     <ion-nav-bar class="bar-stable bar-royal nav-title-slide-ios7">
         <ion-nav-back-button class="button-icon icon  ion-ios7-arrow-thin-left">
         </ion-nav-back-button>
+        <ion-nav-buttons side="left">
+            <button class="button logcon"></button>
+        </ion-nav-buttons>
     </ion-nav-bar>
     <ion-nav-view></ion-nav-view>
 </body>
