@@ -120,7 +120,7 @@ a {
 }
 
 .item {
-    color: #a8a8a8 !important;
+    color: #5C5C5C !important;
     font-size: 14px;
     font-weight: 500;
 }
@@ -321,4 +321,8 @@ input.discountcoupon.form-control.newsletteremail.ng-pristine.ng-valid {
     font-size: 14px;
     color: #4D5355;
     padding: 4px 10px;
+}
+a.item-content {
+  color: #5C5C5C;
+  font-weight: 500;
 }
