@@ -267,11 +267,7 @@ input.discountcoupon.form-control.newsletteremail.ng-pristine.ng-valid {
     color: #4D5355;
     padding: 4px 10px;
 }
-<<<<<<< HEAD
-a.item-content {
-  color: #5C5C5C;
-  font-weight: 500;
-=======
+
 .button.logcon {
   background-image: url('../img/logo_mm.png');
   background-color: transparent;
@@ -282,5 +278,5 @@ a.item-content {
   -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;
   background-size: 100% 100%;
->>>>>>> origin/master
+
 }
