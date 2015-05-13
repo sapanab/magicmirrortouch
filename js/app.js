@@ -234,13 +234,13 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices'])
             if(conversionrate[i].name==currency)
             {
                 //console.log("currency: "+currency+" price ini: "+price+" price new: "+parseFloat(conversionrate[i].conversionrate)*price);
-                if(currency=="USD")
+                if(currency=="INR")
                 {
                     currencyshow="Rs";
                 }
-                else if(currency=="EURO")
+                else
                 {
-                    currencyshow="€";
+                    currencyshow="$";
                 }
                 return currencyshow+" "+(parseFloat(conversionrate[i].conversionrate)*price).toFixed(2);
             }
