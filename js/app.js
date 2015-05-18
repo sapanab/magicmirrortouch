@@ -33,7 +33,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices'])
     $stateProvider
 
     // setup an abstract state for the tabs directive
-        .state('tab', {
+    .state('tab', {
         url: "/tab",
         abstract: true,
         templateUrl: "templates/tabs.html",
@@ -58,16 +58,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices'])
             'tab-home': {
                 templateUrl: 'templates/tab-home.html',
                 controller: 'HomeCtrl'
-            }
-        }
-    })
-    
-     .state('tab.miss-uni', {
-        url: '/miss-uni',
-        views: {
-            'tab-home': {
-                templateUrl: 'templates/miss-uni.html',
-                controller: 'MissuniCtrl'
             }
         }
     })
@@ -103,33 +93,33 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices'])
     })
 
     .state('tab.productwish', {
-            url: '/account/wishlist/product/:pid',
-            views: {
-                'tab-account': {
-                    templateUrl: 'templates/shop-product.html',
-                    controller: 'ProductCtrl'
-                }
+        url: '/account/wishlist/product/:pid',
+        views: {
+            'tab-account': {
+                templateUrl: 'templates/shop-product.html',
+                controller: 'ProductCtrl'
             }
-        })
-        .state('tab.producthome', {
-            url: '/home/product/:pid',
-            views: {
-                'tab-home': {
-                    templateUrl: 'templates/shop-product.html',
-                    controller: 'ProductCtrl'
-                }
+        }
+    })
+    .state('tab.producthome', {
+        url: '/home/product/:pid',
+        views: {
+            'tab-home': {
+                templateUrl: 'templates/shop-product.html',
+                controller: 'ProductCtrl'
             }
-        })
+        }
+    })
 
     .state('tab.lookbook', {
-            url: '/lookbook',
-            views: {
-                'tab-lookbook': {
-                    templateUrl: 'templates/tab-lookbook.html',
-                    controller: 'LookbookCtrl'
-                }
+        url: '/lookbook',
+        views: {
+            'tab-lookbook': {
+                templateUrl: 'templates/tab-lookbook.html',
+                controller: 'LookbookCtrl'
             }
-        })
+        }
+    })
         .state('tab.lookbookitem', {
             url: '/lookbook/items',
             views: {
@@ -166,33 +156,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices'])
                 }
             }
         })
-
-    .state('welcome', {
-        url: "/welcomescreen",
-        templateUrl: "templates/welcomescreen.html",
-        controller: 'WelcomeCtrl'
-    })
-
-
-    .state('tab.signup', {
-        url: '/account/signup',
-        views: {
-            'tab-account': {
-                templateUrl: 'templates/account-signup.html',
-                controller: 'LoginCtrl'
+        .state('tab.signup', {
+            url: '/account/signup',
+            views: {
+                'tab-account': {
+                    templateUrl: 'templates/account-signup.html',
+                    controller: 'LoginCtrl'
+                }
             }
-        }
-    })
+        })
 
-    .state('tab.wishlist', {
-        url: '/account/wishlist',
-        views: {
-            'tab-account': {
-                templateUrl: 'templates/account-wishlist.html',
-                controller: 'WishlistCtrl'
+        .state('tab.wishlist', {
+            url: '/account/wishlist',
+            views: {
+                'tab-account': {
+                    templateUrl: 'templates/account-wishlist.html',
+                    controller: 'WishlistCtrl'
+                }
             }
-        }
-    })
+        })
 
     .state('tab.contact', {
         url: '/contact',
@@ -241,20 +223,26 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices'])
 
 .filter('convertprice', function () {
     return function (input) {
-        var price = parseFloat(input);
-        if (price < 0) {
+        var price=parseFloat(input);
+        if(price<0)
+        {
             return 0;
         }
-        var currencyshow = "Rs";
-        for (var i = 0; i < conversionrate.length; i++) {
-            if (conversionrate[i].name == currency) {
+        var currencyshow="Rs";
+        for(var i=0;i<conversionrate.length;i++)
+        {
+            if(conversionrate[i].name==currency)
+            {
                 //console.log("currency: "+currency+" price ini: "+price+" price new: "+parseFloat(conversionrate[i].conversionrate)*price);
-                if (currency == "INR") {
-                    currencyshow = "Rs";
-                } else {
-                    currencyshow = "$";
+                if(currency=="INR")
+                {
+                    currencyshow="Rs";
                 }
-                return currencyshow + " " + (parseFloat(conversionrate[i].conversionrate) * price).toFixed(2);
+                else
+                {
+                    currencyshow="$";
+                }
+                return currencyshow+" "+(parseFloat(conversionrate[i].conversionrate)*price).toFixed(2);
             }
         }
     };
@@ -262,16 +250,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices'])
 
 
 .filter('imagepath', function () {
-        return function (input) {
-            return "http://magicmirrornew.appspot.com/showimage?size=300&image=gs://magicmirroruploads/uploads/" + input.trim();
-        };
-    })
-    .filter('imagepathbig', function () {
-        return function (input) {
-            return "http://magicmirrornew.appspot.com/showimage?size=800&image=gs://magicmirroruploads/uploads/" + input.trim();
-        };
-    })
-    .filter('inSlicesOf', ['$rootScope',
+  return function (input) {
+      return "http://magicmirrornew.appspot.com/showimage?size=300&image=gs://magicmirroruploads/uploads/"+input.trim();
+  };
+})
+.filter('imagepathbig', function () {
+  return function (input) {
+      return "http://magicmirrornew.appspot.com/showimage?size=800&image=gs://magicmirroruploads/uploads/"+input.trim();
+  };
+})
+.filter('inSlicesOf', ['$rootScope',
          function ($rootScope) {
             makeSlices = function (items, count) {
                 if (!count)
@@ -298,18 +286,19 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices'])
 
             return makeSlices;
          }])
-    .filter('noFractionCurrency', ['$filter', '$locale',
-                 function (filter, locale) {
-            var currencyFilter = filter('currency');
-            var formats = locale.NUMBER_FORMATS;
-            return function (amount, currencySymbol) {
-                var value = currencyFilter(amount, currencySymbol);
-                var sep = value.indexOf(formats.DECIMAL_SEP);
-                if (amount >= 0) {
-                    return value.substring(0, sep);
-                }
-                return value.substring(0, sep) + ')';
-            };
-                 }]);
+.filter('noFractionCurrency',
+                [ '$filter', '$locale',
+                 function(filter, locale) {
+                     var currencyFilter = filter('currency');
+                     var formats = locale.NUMBER_FORMATS;
+                     return function(amount, currencySymbol) {
+                         var value = currencyFilter(amount, currencySymbol);
+                         var sep = value.indexOf(formats.DECIMAL_SEP);
+                         if(amount >= 0) {
+                             return value.substring(0, sep);
+                         }
+                         return value.substring(0, sep) + ')';
+                     };
+                 } ]);
 
 ;

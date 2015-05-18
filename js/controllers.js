@@ -335,12 +335,6 @@ angular.module('starter.controllers', ['myservices'])
 .controller('AccountCtrl', function ($scope) {
 
 })
-.controller('WelcomeCtrl', function ($scope) {
-
-})
-.controller('MissuniCtrl', function ($scope) {
-
-})
 
 .controller('CartCtrl', function ($scope, $stateParams, MyServices, $ionicLoading) {
     //Product details

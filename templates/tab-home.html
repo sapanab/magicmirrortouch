@@ -6,7 +6,6 @@
                     <img src="img/mlogo.png" style="width:85%;">
                 </a>
             </div>
-            <!--
             <ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="true" show-pager="false" auto-play="3000">
                 <ion-slide>
                     <div class="">
@@ -34,7 +33,6 @@
                     </div>
                 </ion-slide>
             </ion-slide-box>
--->
             <!--
 <div class="pos">
     <a href="#">
@@ -48,7 +46,6 @@
     </div>
 </div>
 -->
-            <!--
             <div class="pos">
                 <a href="#">
                     <img class="mt-5" src="img/back2.jpg" width="100%" />
@@ -60,8 +57,6 @@
                     </div>
                 </div>
             </div>
--->
-            <!--
             <div class="productset">
                 <div class="imageset">
                     <div class="hdtitle">Categories</div>
@@ -77,51 +72,13 @@
                     </ion-scroll>
                 </div>
             </div>    
--->
-            <div>
-                <div class="row jwellery">
-                    <div class="col" style="border-right:none;">
-                        <img src="img/p4.png">
-                        <p class="text-center">American Diamond</p>
-                    </div>
-                    <div class="col">
-                        <img src="img/p2.png">
-                        <p class="text-center">Antique</p>
-                    </div>
-                </div>
-                <div class="row jwellery">
-                    <div class="col" style="border-right:none;border-top:none;border-bottom:none;">
-                        <img src="img/p1.png">
-                        <p class="text-center">Pearl</p>
-                    </div>
-                    <div class="col" style="border-top:none;border-bottom:none;">
-                        <img src="img/p3.png">
-                        <p class="text-center">Corporate</p>
-                    </div>
-                </div>
-                <div class="row jwellery">
-                    <div class="col" style="border-right:none;">
-                        <img src="img/up4.png">
-                        <p class="text-center">Micro</p>
-                    </div>
-                    <div class="col">
-                        <img src="img/up1.png">
-                        <p class="text-center">Wedding Jwellery</p>
-                    </div>
-                </div>
-            </div>
-            <div class="mt15 pos">
-                <img class="misslogo" src="img/missuni1.png"><span class="mtext">Premium Fashion Jwellery</span>
-                <img class="mt5" src="img/miss.png" style="width:100%;">
-            </div>
-            <div class="productset">
+                       <div class="productset">
                 <div class="imageset">
                     <div class="hdtitle">What’s Trending</div>
                     <ion-scroll direction="x">
                         <div class="row">
                             <div class="col col-25" ng-repeat="slider in slidersss">
                                 <a href="#/tab/dash/categories/{{slider.link}}">
-                                   <i class="icon hrt ion-heart"></i>
                                     <img src="{{slider.image}}" class="full-image">
                                     <p class="royal productprice">{{slider.name}}</p>
                                 </a>
