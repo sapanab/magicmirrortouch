@@ -1,6 +1,9 @@
-<!--<ion-view title="MagicMirror" hide-nav-bar="true">-->
-<ion-view title="">
-    <ion-content>
+<ion-view title="MagicMirror" hide-nav-bar="true">
+<!--<ion-view title="">-->
+    <ion-header-bar class="bar bar-header bar-light">
+        <h1 class="title">Magic mirror</h1>
+    </ion-header-bar>
+    <ion-content class="has-header">
         <center>
             <div class="padding">
                 <a href="#/tab/dash">
@@ -122,7 +125,7 @@
                         <div class="row">
                             <div class="col col-33" ng-repeat="slider in slidersss">
                                 <a href="#/tab/dash/categories/{{slider.link}}">
-                                   <i class="icon hrt ion-heart"></i>
+                                    <i class="icon hrt ion-heart"></i>
                                     <img src="{{slider.image}}" class="full-image">
                                     <p class="royal productprice">{{slider.name}}</p>
                                 </a>
