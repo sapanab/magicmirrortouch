@@ -290,7 +290,7 @@ img.socialicons {
     font-family: 'futura' !important;
     -webkit-font-smoothing: antialiased;
     font-size: 18px;
-    background: #f7f7f7;
+    background: #E6E6E6;
     margin-top: 7px;
 }
 
@@ -353,6 +353,10 @@ input.discountcoupon.form-control.newsletteremail.ng-pristine.ng-valid {
 .style-two {
     border: 0;
     height: 1px;
+    background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(197, 197, 197, 0.75)), to(rgba(197, 197, 197, 0)));
+    background-image: -webkit-linear-gradient(left, transparent, rgba(197, 197, 197, 0.75), rgba(197, 197, 197, 0));
+    background-image: -moz-linear-gradient(left, transparent, rgba(197, 197, 197, 0.75), rgba(197, 197, 197, 0));
+    background-image: -o-linear-gradient(left, transparent, rgba(197, 197, 197, 0.75), rgba(197, 197, 197, 0));
     background-image: linear-gradient(to right, transparent, rgba(197, 197, 197, 0.75), rgba(197, 197, 197, 0));
     position: relative;
     top: 215px;
@@ -361,6 +365,10 @@ input.discountcoupon.form-control.newsletteremail.ng-pristine.ng-valid {
 .splash .logo {
     position: absolute;
     top: 100px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
     transform: translateX(-50%);
     left: 50%;
 }
@@ -369,6 +377,10 @@ input.discountcoupon.form-control.newsletteremail.ng-pristine.ng-valid {
     position: absolute;
     top: 265px;
     width: 70%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
     transform: translateX(-50%);
     left: 50%;
 }
@@ -376,6 +388,10 @@ input.discountcoupon.form-control.newsletteremail.ng-pristine.ng-valid {
 .splash p {
     position: absolute;
     top: 330px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
     transform: translateX(-50%);
     left: 50%;
 }
@@ -386,7 +402,7 @@ input.discountcoupon.form-control.newsletteremail.ng-pristine.ng-valid {
 }
 
 .jwellery .col {
-    border: 2px solid #c5c5c5;
+    border: 2px solid #ddd;
     padding-bottom: 0;
 }
 
