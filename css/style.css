@@ -109,8 +109,6 @@ a {
     border-bottom-width: 2px;
     background-color: #4d5355 !important;
     background-image: -webkit-linear-gradient(90deg, #d8f2ef, #d8f2ef 50%, transparent 50%) !important;
-    background-image: -moz-linear-gradient(90deg, #d8f2ef, #d8f2ef 50%, transparent 50%) !important;
-    background-image: -o-linear-gradient(90deg, #d8f2ef, #d8f2ef 50%, transparent 50%) !important;
     background-image: linear-gradient(0deg, #d8f2ef, #d8f2ef 50%, transparent 50%) !important;
     color: #FFF !important;
 }
@@ -343,9 +341,6 @@ input.discountcoupon.form-control.newsletteremail.ng-pristine.ng-valid {
     border: 0;
     width: 29px;
     height: 28px;
-    -webkit-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
     background-size: 100% 100%;
 }
 /* Gradient transparent - color - transparent */
@@ -355,8 +350,6 @@ input.discountcoupon.form-control.newsletteremail.ng-pristine.ng-valid {
     height: 1px;
     background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(197, 197, 197, 0.75)), to(rgba(197, 197, 197, 0)));
     background-image: -webkit-linear-gradient(left, transparent, rgba(197, 197, 197, 0.75), rgba(197, 197, 197, 0));
-    background-image: -moz-linear-gradient(left, transparent, rgba(197, 197, 197, 0.75), rgba(197, 197, 197, 0));
-    background-image: -o-linear-gradient(left, transparent, rgba(197, 197, 197, 0.75), rgba(197, 197, 197, 0));
     background-image: linear-gradient(to right, transparent, rgba(197, 197, 197, 0.75), rgba(197, 197, 197, 0));
     position: relative;
     top: 215px;
@@ -366,9 +359,7 @@ input.discountcoupon.form-control.newsletteremail.ng-pristine.ng-valid {
     position: absolute;
     top: 100px;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%);
     left: 50%;
 }
@@ -378,9 +369,7 @@ input.discountcoupon.form-control.newsletteremail.ng-pristine.ng-valid {
     top: 265px;
     width: 70%;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%);
     left: 50%;
 }
@@ -389,9 +378,7 @@ input.discountcoupon.form-control.newsletteremail.ng-pristine.ng-valid {
     position: absolute;
     top: 330px;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%);
     left: 50%;
 }
@@ -440,3 +427,7 @@ input.discountcoupon.form-control.newsletteremail.ng-pristine.ng-valid {
 .bl{
     border-left: none;
 }
+
+.stable, a.stable {
+  color: #4D5355;
+} 
