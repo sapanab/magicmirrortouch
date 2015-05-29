@@ -19,7 +19,7 @@ angular.module('starter.controllers', ['myservices'])
     $scope.sliderss = [{
         "id": "1",
         "image": "img/up1.png",
-        "link": "AD-NECKLACE-SET",
+        "link": "AD-Bangle",
         "name": "Bangle"
 
                 }, {
@@ -37,8 +37,8 @@ angular.module('starter.controllers', ['myservices'])
                 }, {
         "id": "4",
         "image": "img/up4.png",
-        "link": "Corporate-Earings",
-        "name": "Earings"
+        "link": "Earring",
+        "name": "Earrings"
 
                 }, {
         "id": "5",
