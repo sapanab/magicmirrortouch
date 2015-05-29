@@ -283,7 +283,7 @@ var myservices = angular.module('myservices', [])
             });
         },
         registeruser: function (firstname, lastname, email, password) {
-            return $http.post(adminurl + 'registeruser?firstname=' + firstname + '&lastname=' + lastname + '&email=' + email + '&password=' + password, {}, {
+            return $http.post(adminurl + 'registeruser', {firstname:firstname,lastname:lastname,email:email,password:password}, {}, {
                 withCredentials: true
             });
         },
