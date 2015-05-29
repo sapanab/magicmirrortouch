@@ -26,8 +26,8 @@ textarea {
     font-family: 'futura' !important;
     -webkit-font-smoothing: antialiased;
 }
-.full-image {
-    width: 100%;
+.full-images {
+    width: 70px;
 }
 a {
     text-decoration: none !important;
@@ -265,17 +265,25 @@ input.discountcoupon.form-control.newsletteremail.ng-pristine.ng-valid {
     color: #4D5355;
     padding: 4px 10px;
 }
-
 .button.logcon {
-  background-image: url('../img/logo_mm.png');
-  background-color: transparent;
-  border: 0;
-  width: 29px;
-  height: 28px;
-  background-size: 100% 100%;
-
+    background-image: url('../img/logo_mm.png');
+    background-color: transparent;
+    border: 0;
+    width: 29px;
+    height: 28px;
+    background-size: 100% 100%;
+}
+.stable,
+a.stable {
+    color: #4D5355;
+}
+.main-slide {
+    display: table-cell;
+    padding: 8px 0 2px;
+    font-size: 12px;
 }
 
-.stable, a.stable {
-  color: #4D5355;
+.slidescrolls
+{
+    display: table;
 }
