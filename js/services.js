@@ -288,7 +288,7 @@ var myservices = angular.module('myservices', [])
             });
         },
         loginuser: function (email, password) {
-            return $http.post(adminurl + 'loginuser?email=' + email + '&password=' + password, {}, {
+            return $http.post(adminurl + 'loginuser',{email:email,password:password}, {}, {
                 withCredentials: true
             });
         },
