@@ -150,7 +150,7 @@ angular.module('starter.controllers', ['myservices'])
 
     };
     MyServices.getproductbycategory(categoryId).success(onsuccess);
-    var oldpage = 0;
+    var oldpage = 1;
     $scope.loadMore = function () {
 
         console.log("ADD MORE: " + oldpage);
