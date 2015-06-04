@@ -679,27 +679,12 @@
         </div>
 
         <form action="http://magicmirror.in/paymentgateway/index.php" method="post" style="padding-top:20px;">
-            <!--                                    <span style="font-weight:600; padding-top:20px">Order Id:</span> {{payment.orderid}}-->
-
-            <!--               CHECKOUT POST FORM START                    -->
-
-            <label class="item item-input">
-                <input type="text" name="orderid" ng-model="payment.orderid">
-            </label>
-            <label class="item item-input">
-                <input type="text" name="amount" ng-model="payment.amount">
-            </label>
-            <!--
-                                    <input type="text" name="orderid" ng-model="payment.orderid">
-                                    <input type="text" name="amount" ng-model="payment.amount">
--->
-            <label class="item item-input">
+                <input type="text" name="orderid" ng-model="payment.orderid" style="display:none;">
+                <input type="text" name="amount" ng-model="payment.amount" style="display:none;">
+            <label class="item item-input" ng-if="orderplacedid">
                 <input type="submit" value="Place Order" class="button button-block button-royal submits">
             </label>
 
-            <!--                                    <input type="submit" class="btns placeorder btns-primary" style="text-align:center;" ng-if="orderplacedid" value="Place Order">-->
-
-            <!--               CHECKOUT POST FORM START                    -->
         </form>
         <!-- listing -->
 

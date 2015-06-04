@@ -744,14 +744,111 @@ angular.module('starter.controllers', ['myservices'])
         console.log($scope.payment);
     };
     $scope.continuepayment = function(form) {
-        $scope.paywithcard = 1;
-        $scope.form.finalamount = $scope.subtotal;
-        $scope.paymentorderemail = $scope.form.email;
-        console.log($scope.cart);
-        $scope.form.cart = $scope.cart;
-        $scope.form.user = $scope.id;
-        $scope.form.status = $scope.status;
-        MyServices.placeorder(form).success(orderplaced);
+        if($scope.diffadd == true){
+            $scope.allvalidation = [{
+                field: $scope.form.firstname,
+                validation: ""
+            }, {
+                field: $scope.form.lastname,
+                validation: ""
+            }, {
+                field: $scope.form.company,
+                validation: ""
+            }, {
+                field: $scope.form.email,
+                validation: ""
+            }, {
+                field: $scope.form.billingaddress,
+                validation: ""
+            }, {
+                field: $scope.form.billingcity,
+                validation: ""
+            }, {
+                field: $scope.form.billingstate,
+                validation: ""
+            }, {
+                field: $scope.form.billingpincode,
+                validation: ""
+            }, {
+                field: $scope.form.billingcountry,
+                validation: ""
+            }, {
+                field: $scope.form.phone,
+                validation: ""
+            }, {
+                field: $scope.form.shippingname,
+                validation: ""
+            }, {
+                field: $scope.form.shippingtel,
+                validation: ""
+            }, {
+                field: $scope.form.shippingaddress,
+                validation: ""
+            }, {
+                field: $scope.form.shippingcity,
+                validation: ""
+            }, {
+                field: $scope.form.shippingstate,
+                validation: ""
+            }, {
+                field: $scope.form.shippingpincode,
+                validation: ""
+            }, {
+                field: $scope.form.customernote,
+                validation: ""
+            }];
+            
+        }else{
+            
+                $scope.allvalidation = [{
+                field: $scope.form.firstname,
+                validation: ""
+            }, {
+                field: $scope.form.lastname,
+                validation: ""
+            }, {
+                field: $scope.form.company,
+                validation: ""
+            }, {
+                field: $scope.form.email,
+                validation: ""
+            }, {
+                field: $scope.form.billingaddress,
+                validation: ""
+            }, {
+                field: $scope.form.billingcity,
+                validation: ""
+            }, {
+                field: $scope.form.billingstate,
+                validation: ""
+            }, {
+                field: $scope.form.billingpincode,
+                validation: ""
+            }, {
+                field: $scope.form.billingcountry,
+                validation: ""
+            }, {
+                field: $scope.form.phone,
+                validation: ""
+            }];
+
+        }
+        
+        var check = formvalidation();
+        console.log(check);
+        if (check) {
+            $scope.paywithcard = 1;
+            $scope.form.finalamount = $scope.subtotal;
+            $scope.paymentorderemail = $scope.form.email;
+            console.log($scope.cart);
+            $scope.form.cart = $scope.cart;
+            $scope.form.user = $scope.id;
+            $scope.form.status = $scope.status;
+            MyServices.placeorder(form).success(orderplaced);
+        }
+
+        
+        
     }
 
     //    end shipping to different address fucntion
@@ -982,26 +1079,26 @@ angular.module('starter.controllers', ['myservices'])
 
 
 
-    var placeordersuccess = function(data, status) {
-        console.log(data);
-        $scope.paymentorderid = data;
-        $scope.showpaywithcard = true;
-        $scope.showplaceorder = false;
-    };
-
-    $scope.placeorder = function(amount, form) {
-        console.log("strippaymentGen form");
-
-        $scope.paywithcard = 1;
-        $scope.form.finalamount = $scope.subtotal;
-        console.log($scope.cart);
-        //MainJson.orderitem($scope.cart);
-        $scope.form.cart = $scope.cart;
-        $scope.form.user = $scope.id;
-        $scope.form.status = $scope.status;
-        $scope.paymentorderemail = $scope.form.email;
-        MyServices.placeorder(form).success(placeordersuccess);
-    };
+//    var placeordersuccess = function(data, status) {
+//        console.log(data);
+//        $scope.paymentorderid = data;
+//        $scope.showpaywithcard = true;
+//        $scope.showplaceorder = false;
+//    };
+//
+//    $scope.placeorder = function(amount, form) {
+//        console.log("strippaymentGen form");
+//
+//        $scope.paywithcard = 1;
+//        $scope.form.finalamount = $scope.subtotal;
+//        console.log($scope.cart);
+//        //MainJson.orderitem($scope.cart);
+//        $scope.form.cart = $scope.cart;
+//        $scope.form.user = $scope.id;
+//        $scope.form.status = $scope.status;
+//        $scope.paymentorderemail = $scope.form.email;
+//        MyServices.placeorder(form).success(placeordersuccess);
+//    };
 
     $scope.StipePaymentGen = function(amount, form) {
         console.log("strippaymentGen form");
