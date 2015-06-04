@@ -681,6 +681,25 @@
         <form action="http://magicmirror.in/paymentgateway/index.php" method="post" style="padding-top:20px;">
                 <input type="text" name="orderid" ng-model="payment.orderid" style="display:none;">
                 <input type="text" name="amount" ng-model="payment.amount" style="display:none;">
+                                    <input type="text" name="firstname" ng-model="form.firstname" style="display:none">
+                                    <input type="text" name="lastname" ng-model="form.lastname" style="display:none">
+                                    <input type="text" name="billingaddress" ng-model="form.billingaddress" style="display:none">
+<!--                                    <input type="text" name="billingcountry" ng-model="form.billingcountry" style="display:none">-->
+                                    <input type="text" name="billingstate" ng-model="form.billingstate" style="display:none">
+                                    <input type="text" name="billingcity" ng-model="form.billingcity" style="display:none">
+                                    <input type="text" name="billingpincode" ng-model="form.billingpincode" style="display:none">
+                                    <input type="text" name="phone" ng-model="form.phone" style="display:none">
+                                    <input type="text" name="email" ng-model="form.email" style="display:none">
+                                    <input type="text" name="shippingname" ng-model="form.shippingname" style="display:none">
+                                    <input type="text" name="shippingaddress" ng-model="form.shippingaddress" style="display:none">
+<!--                                    <input type="text" name="shippingcountry" ng-model="form.shippingcountry" style="display:none">-->
+                                    <input type="text" name="shippingcity" ng-model="form.shippingcity" style="display:none">
+                                    <input type="text" name="shippingstate" ng-model="form.shippingstate" style="display:none">
+                                    <input type="text" name="shippingpincode" ng-model="form.shippingpincode" style="display:none">
+                                    <input type="text" name="shippingtel" ng-model="form.shippingtel" style="display:none">
+                
+                
+                
             <label class="item item-input" ng-if="orderplacedid">
                 <input type="submit" value="Place Order" class="button button-block button-royal submits">
             </label>
