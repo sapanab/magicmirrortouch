@@ -116,7 +116,22 @@ angular.module('starter.controllers', ['myservices'])
 
 })
 
-.controller('ItemCtrl', function($scope, $stateParams, MyServices,$ionicModal) {
+.controller('ItemCtrl', function($scope, $stateParams, MyServices, $ionicModal) {
+
+
+    // USING LODASH
+    var users = [{
+        'user': 'barney',
+        'age': "36"
+    }, {
+        'user': 'fred',
+        'age': "40"
+    }];
+    
+    $scope.dashvar = _.min(users, function(chr) {
+        return chr.age;
+    });
+    console.log($scope.dashvar);
 
     var authenticate = function(data, status) {
         console.log(data);
@@ -147,13 +162,25 @@ angular.module('starter.controllers', ['myservices'])
     var onsuccess = function(data, status) {
         console.log(data);
         for (var i = 0; i < data.queryresult.length; i++) {
+        
             $scope.productItem.push(data.queryresult[i]);
         }
+        
+        
         if (data.lastpage > $scope.pageno) {
             $scope.pageno = $scope.pageno + 1;
         } else {
             $scope.$broadcast('scroll.infiniteScrollComplete');
         }
+        
+        console.log($scope.productItem);
+        
+        $scope.minimum = _.max($scope.productItem, function(prod){
+            return prod.price;
+        });
+        
+        console.log("minimum price");
+        console.log($scope.minimum.price);
 
     };
     MyServices.getproductbycategory(categoryId).success(onsuccess);
@@ -180,16 +207,16 @@ angular.module('starter.controllers', ['myservices'])
         id: '1',
         scope: $scope,
         animation: 'slide-in-up'
-    }).then(function (modal) {
+    }).then(function(modal) {
         $scope.modal = modal;
     });
 
-    $scope.openfilter = function () {
+    $scope.openfilter = function() {
         $scope.modal.show();
         console.log("1");
     };
 
-    $scope.closefilter = function () {
+    $scope.closefilter = function() {
         $scope.modal.hide();
     };
 
@@ -197,16 +224,16 @@ angular.module('starter.controllers', ['myservices'])
         id: '2',
         scope: $scope,
         animation: 'slide-in-up'
-    }).then(function (modal) {
+    }).then(function(modal) {
         $scope.modal = modal;
     });
 
-    $scope.opensort = function () {
+    $scope.opensort = function() {
         $scope.modal.show();
         console.log("2");
     };
 
-    $scope.closesort = function () {
+    $scope.closesort = function() {
         $scope.modal.hide();
     };
 
@@ -776,7 +803,7 @@ angular.module('starter.controllers', ['myservices'])
         console.log($scope.payment);
     };
     $scope.continuepayment = function(form) {
-        if($scope.diffadd == true){
+        if ($scope.diffadd == true) {
             $scope.allvalidation = [{
                 field: $scope.form.firstname,
                 validation: ""
@@ -829,10 +856,10 @@ angular.module('starter.controllers', ['myservices'])
                 field: $scope.form.customernote,
                 validation: ""
             }];
-            
-        }else{
-            
-                $scope.allvalidation = [{
+
+        } else {
+
+            $scope.allvalidation = [{
                 field: $scope.form.firstname,
                 validation: ""
             }, {
@@ -865,7 +892,7 @@ angular.module('starter.controllers', ['myservices'])
             }];
 
         }
-        
+
         var check = formvalidation();
         console.log(check);
         if (check) {
@@ -879,8 +906,8 @@ angular.module('starter.controllers', ['myservices'])
             MyServices.placeorder(form).success(orderplaced);
         }
 
-        
-        
+
+
     }
 
     //    end shipping to different address fucntion
@@ -1111,26 +1138,26 @@ angular.module('starter.controllers', ['myservices'])
 
 
 
-//    var placeordersuccess = function(data, status) {
-//        console.log(data);
-//        $scope.paymentorderid = data;
-//        $scope.showpaywithcard = true;
-//        $scope.showplaceorder = false;
-//    };
-//
-//    $scope.placeorder = function(amount, form) {
-//        console.log("strippaymentGen form");
-//
-//        $scope.paywithcard = 1;
-//        $scope.form.finalamount = $scope.subtotal;
-//        console.log($scope.cart);
-//        //MainJson.orderitem($scope.cart);
-//        $scope.form.cart = $scope.cart;
-//        $scope.form.user = $scope.id;
-//        $scope.form.status = $scope.status;
-//        $scope.paymentorderemail = $scope.form.email;
-//        MyServices.placeorder(form).success(placeordersuccess);
-//    };
+    //    var placeordersuccess = function(data, status) {
+    //        console.log(data);
+    //        $scope.paymentorderid = data;
+    //        $scope.showpaywithcard = true;
+    //        $scope.showplaceorder = false;
+    //    };
+    //
+    //    $scope.placeorder = function(amount, form) {
+    //        console.log("strippaymentGen form");
+    //
+    //        $scope.paywithcard = 1;
+    //        $scope.form.finalamount = $scope.subtotal;
+    //        console.log($scope.cart);
+    //        //MainJson.orderitem($scope.cart);
+    //        $scope.form.cart = $scope.cart;
+    //        $scope.form.user = $scope.id;
+    //        $scope.form.status = $scope.status;
+    //        $scope.paymentorderemail = $scope.form.email;
+    //        MyServices.placeorder(form).success(placeordersuccess);
+    //    };
 
     $scope.StipePaymentGen = function(amount, form) {
         console.log("strippaymentGen form");
@@ -1158,7 +1185,7 @@ angular.module('starter.controllers', ['myservices'])
         console.log(data);
         //alert("Email send");
     };
-   
+
 
 })
 

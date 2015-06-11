@@ -127,6 +127,12 @@ var myservices = angular.module('myservices', [])
     var retailer = 0;
     var category = 0;
     var useremail = "";
+    var filters = {
+        color: "",
+        pricemin: 0,
+        pricemax: 50000,
+        orderby: "new"
+    };
     var coupondetails = $.jStorage.get("coupon");
     var discount = $.jStorage.get("coupon");
     return {
@@ -154,6 +160,12 @@ var myservices = angular.module('myservices', [])
                 withCredentials: true
             });
         },
+        getfilters: function() {
+            return filters;
+        },
+        setfilter: function(filter) {
+            filters = filter;
+        },
         getproductdetails: function (product, category) {
             return $http.get(adminurl + 'getproductdetails', {
                 params: {
@@ -168,6 +180,10 @@ var myservices = angular.module('myservices', [])
                 params: {
                     pageno: pageno,
                     category: category,
+                    color: filters.color,
+                    price1: filters.pricemin,
+                    price2: filters.pricemax,
+                    orderby: filters.orderby,
                 }
             }, {
                 withCredentials: true
