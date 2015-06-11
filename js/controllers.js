@@ -116,7 +116,7 @@ angular.module('starter.controllers', ['myservices'])
 
 })
 
-.controller('ItemCtrl', function($scope, $stateParams, MyServices) {
+.controller('ItemCtrl', function($scope, $stateParams, MyServices,$ionicModal) {
 
     var authenticate = function(data, status) {
         console.log(data);
@@ -176,7 +176,39 @@ angular.module('starter.controllers', ['myservices'])
         // $scope.$broadcast('scroll.infiniteScrollComplete');
     };
     $scope.loadMore();
+    $ionicModal.fromTemplateUrl('templates/filter.html', {
+        id: '1',
+        scope: $scope,
+        animation: 'slide-in-up'
+    }).then(function (modal) {
+        $scope.modal = modal;
+    });
 
+    $scope.openfilter = function () {
+        $scope.modal.show();
+        console.log("1");
+    };
+
+    $scope.closefilter = function () {
+        $scope.modal.hide();
+    };
+
+    $ionicModal.fromTemplateUrl('templates/sortby.html', {
+        id: '2',
+        scope: $scope,
+        animation: 'slide-in-up'
+    }).then(function (modal) {
+        $scope.modal = modal;
+    });
+
+    $scope.opensort = function () {
+        $scope.modal.show();
+        console.log("2");
+    };
+
+    $scope.closesort = function () {
+        $scope.modal.hide();
+    };
 
 })
 

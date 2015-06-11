@@ -1,0 +1,26 @@
+<ion-modal-view view-title="Add Balance">
+    <ion-header-bar class="bar-royal">
+        <h1 class="title">Filter</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closefilter()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content class="padding bg-light">
+        <form class="filter-form">
+            <div class="list">
+                <label class="item item-input range-item">
+                    <span class="input-label">Range</span>
+                    <input type="text" required>
+                    <div class="range range-assertive">
+                        <input type="range" min="100000" max="20000000" step="1000">
+                    </div>
+                </label>
+          
+            <div class="button-filter">
+                <button class="button button-balanced button-block" style="background-color: #33cd5f!important;"> Save</button>
+                <a class="button button-assertive button-block"> Clear</a>
+            </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

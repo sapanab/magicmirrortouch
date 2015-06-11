@@ -1,0 +1,49 @@
+<ion-modal-view view-title="Add Balance">
+    <ion-header-bar class="bar-royal">
+        <h1 class="title">Sort By</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closesort()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content class="padding bg-light">
+        <form class="filter-form">
+            <div class="list">
+
+                <label class="item item-radio">
+                    <input type="radio" name="group">
+                    <div class="item-content">
+                      Newest to Oldest
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                </label>
+                
+                <label class="item item-radio">
+                    <input type="radio" name="group">
+                    <div class="item-content">
+                       Oldest to Newest
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                </label>
+                
+                <label class="item item-radio">
+                    <input type="radio" name="group">
+                    <div class="item-content">
+                      Hight to Low
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                </label> 
+                     <label class="item item-radio">
+                    <input type="radio" name="group">
+                    <div class="item-content">
+                     Low to High
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                </label>
+            </div>
+        </form>
+                  <div class="button-filter">
+                <button class="button button-balanced button-block" style="background-color: #33cd5f!important;"> 
+                Sort By</button>
+            </div>
+    </ion-content>
+</ion-modal-view>
