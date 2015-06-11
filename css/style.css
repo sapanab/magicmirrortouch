@@ -297,12 +297,3 @@ input.button.button-block.button-royal.submits {
   margin-right: 10px;
   margin-left: 3px;
 }
-
-.range input {
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #999), color-stop(100%, #999));
-    background-image: -webkit-gradient(linear, left top, right top, from(#999), to(#999));
-    background-image: -webkit-linear-gradient(left, #999 0%, #999 100%);
-    background-image: -moz-linear-gradient(left, #999 0%, #999 100%);
-    background-image: -o-linear-gradient(left, #999 0%, #999 100%);
-    background-image: linear-gradient(to right, #999 0%, #999 100%);
-}
