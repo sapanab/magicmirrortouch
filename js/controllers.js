@@ -208,16 +208,16 @@ angular.module('starter.controllers', ['myservices'])
         scope: $scope,
         animation: 'slide-in-up'
     }).then(function(modal) {
-        $scope.modal = modal;
+        $scope.modal1 = modal;
     });
 
     $scope.openfilter = function() {
-        $scope.modal.show();
+        $scope.modal2.show();
         console.log("1");
     };
 
     $scope.closefilter = function() {
-        $scope.modal.hide();
+        $scope.modal1.hide();
     };
 
     $ionicModal.fromTemplateUrl('templates/sortby.html', {
@@ -225,18 +225,30 @@ angular.module('starter.controllers', ['myservices'])
         scope: $scope,
         animation: 'slide-in-up'
     }).then(function(modal) {
-        $scope.modal = modal;
+        $scope.modal2 = modal;
     });
 
     $scope.opensort = function() {
-        $scope.modal.show();
+        $scope.modal1.show();
         console.log("2");
     };
 
     $scope.closesort = function() {
-        $scope.modal.hide();
+        $scope.modal2.hide();
     };
 
+    
+    //FILTER SAVE
+    
+        $scope.filtersave = function (filter) {
+            console.log("before filte");
+            console.log(filter);
+            MainJson.setfilter(filter);
+            console.log("after filte");
+            console.log(MainJson.getfilters());
+            $scope.products = [];
+            MainJson.getproductbycategory(categoryId).success(onsuccess);
+        };
 })
 
 .controller('ProductCtrl', function($scope, $stateParams, $ionicSlideBoxDelegate, $ionicPopup, $timeout, $ionicLoading, MyServices, $location, $state) {
@@ -1125,7 +1137,7 @@ angular.module('starter.controllers', ['myservices'])
 
     var handler = StripeCheckout.configure({
         key: 'pk_live_I1udSOaNJK4si3FCMwvHsY4g',
-        //key: 'pk_test_4etgLi16WbODEDr4YBFdcbP0',
+//        key: 'pk_test_4etgLi16WbODEDr4YBFdcbP0',
         image: 'img/logo.jpg',
         currency: 'GBP',
         token: function(token) {
