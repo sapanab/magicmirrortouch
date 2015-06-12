@@ -10,7 +10,7 @@
             <div class="list">
 
                 <label class="item item-radio">
-                    <input type="radio" name="group">
+                    <input type="radio" name="group" ng-click="sortvalue = 'new'">
                     <div class="item-content">
                       Newest to Oldest
                     </div>
@@ -18,7 +18,7 @@
                 </label>
                 
                 <label class="item item-radio">
-                    <input type="radio" name="group">
+                    <input type="radio" name="group" ng-click="sortvalue = 'old'">
                     <div class="item-content">
                        Oldest to Newest
                     </div>
@@ -26,14 +26,14 @@
                 </label>
                 
                 <label class="item item-radio">
-                    <input type="radio" name="group">
+                    <input type="radio" name="group" ng-click="sortvalue = 'high'">
                     <div class="item-content">
                       Hight to Low
                     </div>
                     <i class="radio-icon ion-checkmark"></i>
                 </label> 
                      <label class="item item-radio">
-                    <input type="radio" name="group">
+                    <input type="radio" name="group" ng-click="sortvalue = 'low'">
                     <div class="item-content">
                      Low to High
                     </div>
@@ -42,7 +42,7 @@
             </div>
         </form>
                   <div class="button-filter">
-                <button class="button button-balanced button-block" style="background-color: #33cd5f!important;"> 
+                <button class="button button-balanced button-block" style="background-color: #33cd5f!important;" ng-click="orderbychange(sortvalue)"> 
                 Sort By</button>
             </div>
     </ion-content>

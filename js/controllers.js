@@ -243,11 +243,19 @@ angular.module('starter.controllers', ['myservices'])
         $scope.filtersave = function (filter) {
             console.log("before filte");
             console.log(filter);
-            MainJson.setfilter(filter);
+            MyServices.setfilter(filter);
             console.log("after filte");
-            console.log(MainJson.getfilters());
-            $scope.products = [];
-            MainJson.getproductbycategory(categoryId).success(onsuccess);
+            console.log(MyServices.getfilters());
+            $scope.productItem = [];
+            MyServices.getproductbycategory(categoryId).success(onsuccess);
+        };
+    
+    $scope.orderbychange = function (filter) {
+            console.log(filter);
+            MyServices.setfilter(filter);
+            $scope.productItem = [];
+        $scope.modal2.hide();
+            MyServices.getproductbycategory(categoryId).success(onsuccess);
         };
 })
 
