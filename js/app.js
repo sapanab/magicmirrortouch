@@ -251,7 +251,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices'])
 
 .filter('imagepath', function () {
   return function (input) {
-      console.log(input.slice(0,3));
       if(input.slice(0,3)=="gs:"){
           return "http://magicmirrornew.appspot.com/showimage?size=300&image="+input.trim();
       }else{

@@ -10,21 +10,21 @@
             <div class="list">
                 <label class="item item-input range-item">
                     <span class="input-label">Minimum</span>
-                    <input type="text" required>
+                    <input type="text" ng-model="filter.pricemin" required>
                     <div class="range range-assertive">
-                        <input type="range" min="100000" max="20000000" step="1000" ng-model="filter.min">
+                        <input type="range" min="0" max="500000" step="1000" ng-model="filter.pricemin">
                     </div>
                 </label>
                 <label class="item item-input range-item">
                     <span class="input-label">Maximum</span>
-                    <input type="text" required>
+                    <input type="text"  ng-model="filter.pricemax" required>
                     <div class="range range-assertive">
-                        <input type="range" min="{{filter.min}}" max="20000000" step="1000" ng-model="filter.max">
+                        <input type="range" min="{{filter.min}}" max="500000" step="100" ng-model="filter.pricemax">
                     </div>
                 </label>
           
             <div class="button-filter">
-                <button class="button button-balanced button-block" style="background-color: #33cd5f!important;" ng-click="filtersave()"> Save</button>
+                <button class="button button-balanced button-block" style="background-color: #33cd5f!important;" ng-click="filtersave(filter)"> Save</button>
                 <a class="button button-assertive button-block"> Clear</a>
             </div>
             </div>

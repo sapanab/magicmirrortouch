@@ -118,6 +118,13 @@ angular.module('starter.controllers', ['myservices'])
 
 .controller('ItemCtrl', function($scope, $stateParams, MyServices, $ionicModal) {
 
+    
+    $scope.filter = {
+        color: "",
+        pricemin: 0,
+        pricemax: 50000,
+        orderby: "new"
+    };
 
     // USING LODASH
     var users = [{
@@ -247,6 +254,7 @@ angular.module('starter.controllers', ['myservices'])
             console.log("after filte");
             console.log(MyServices.getfilters());
             $scope.productItem = [];
+            $scope.modal1.hide();
             MyServices.getproductbycategory(categoryId).success(onsuccess);
         };
     
@@ -254,7 +262,7 @@ angular.module('starter.controllers', ['myservices'])
             console.log(filter);
             MyServices.setfilter(filter);
             $scope.productItem = [];
-        $scope.modal2.hide();
+            $scope.modal2.hide();
             MyServices.getproductbycategory(categoryId).success(onsuccess);
         };
 })
