@@ -260,7 +260,8 @@ angular.module('starter.controllers', ['myservices'])
     
     $scope.orderbychange = function (filter) {
             console.log(filter);
-            MyServices.setfilter(filter);
+            $scope.filter.orderby = filter
+            MyServices.setfilter($scope.filter);
             $scope.productItem = [];
             $scope.modal2.hide();
             MyServices.getproductbycategory(categoryId).success(onsuccess);
