@@ -10,14 +10,14 @@
                 <a href="#/tab/dash/categories/product/{{pro.id}}">
                     <div class="productItem">
                         <div class="imageheight" style="width:{{imagewidth.width}}px;height:{{imagewidth.width}}px;">
-                            <img ng-src="{{pro.image2|imagepath}}" class="full-image">
+                            <img ng-src="{{pro.image1|imagepath}}" class="full-image">
                         </div>
                         <p class="royal productprice">{{pro.price|convertprice}}</p>
                     </div>
                 </a>
             </div>
         </div>
-        <ion-infinite-scroll on-infinite="loadMore()" distance="1%" icon="ion-loading-c">
+        <ion-infinite-scroll on-infinite="loadMore()" ng-if="loadshow" distance="1%" icon="ion-loading-c">
         </ion-infinite-scroll>
     </ion-content>
 </ion-view>
