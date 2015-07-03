@@ -2,15 +2,16 @@
     <ion-content class="has-header">
         <div class="item item-divider">
             <h4 class="pull-left" ng-click="openfilter();">Sort by</h4>
-            <h4 class="pull-right"  ng-click="opensort();">Filters</h4>
+            <h4 class="pull-right" ng-click="opensort();">Filters</h4>
         </div>
         <div class="row productsCol" ng-repeat="pros in productItem | inSlicesOf:3">
             <div class="col col-33 text-center" ng-repeat="pro in pros">
-  
+
                 <a href="#/tab/dash/categories/product/{{pro.id}}">
                     <div class="productItem">
                         <div class="imageheight" style="width:{{imagewidth.width}}px;height:{{imagewidth.width}}px;">
-                            <img ng-src="{{pro.image1|imagepath}}" class="full-image">
+                            <img ng-src="{{pro.image1|imagepath}}" class="full-image" ng-if="pro.image1">
+                            <img ng-src="{{pro.image2|imagepath}}" class="full-image" ng-if="pro.image2">
                         </div>
                         <p class="royal productprice">{{pro.price|convertprice}}</p>
                     </div>
