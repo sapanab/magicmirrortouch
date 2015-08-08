@@ -221,32 +221,30 @@ angular.module('starter', ['ionic', 'starter.controllers', 'myservices'])
 
 })
 
-.filter('convertprice', function () {
-    return function (input) {
-        var price=parseFloat(input);
-        if(price<0)
-        {
+.filter('convertprice', function() {
+    return function(input) {
+
+        var price = parseFloat(input);
+        if (price < 0) {
             return 0;
         }
-        var currencyshow="Rs";
-        for(var i=0;i<conversionrate.length;i++)
-        {
-            if(conversionrate[i].name==currency)
-            {
+        var currencyshow = "£";
+        for (var i = 0; i < conversionrate.length; i++) {
+            if (conversionrate[i].name == currency) {
                 //console.log("currency: "+currency+" price ini: "+price+" price new: "+parseFloat(conversionrate[i].conversionrate)*price);
-                if(currency=="INR")
-                {
-                    currencyshow="Rs";
-                }
-                else
-                {
-                    currencyshow="$";
-                }
-                return currencyshow+" "+(parseFloat(conversionrate[i].conversionrate)*price).toFixed(2);
+                if (currency == "USD") {
+                    currencyshow = "$";
+                } else if (currency == "EURO") {
+                    currencyshow = "€";
+                }else if(currency == "INR"){
+	 currencyshow = "₹";
+			 }
+                return currencyshow + " " + (parseFloat(conversionrate[i].conversionrate) * price).toFixed(2);
             }
         }
     };
 })
+
 
 
 .filter('imagepath', function () {
